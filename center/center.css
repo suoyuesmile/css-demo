@@ -1,0 +1,112 @@
+/*容器*/
+.demo1, .demo2, .demo3, .demo4, .demo5, .demo6 {
+    margin: 0 auto;
+    position: relative;
+    height: 500px;
+    width: 500px;
+    border: 1px black solid;
+}
+/*样式*/
+.absolute-center, .negative-center, .transform-center, .block-center, .inline-center, .flexbox-center {
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    background: #eee;
+    line-height: 200px;
+    text-align: center;
+}
+
+/*绝对定位法*/
+.absolute-center {
+    position: absolute;
+    margin: auto;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/*负外边距*/
+.negative-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -110px;
+    margin-top: -110px;
+}
+
+/*tranfrom法*/
+.transform-center {
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+/*table-cell*/
+.demo4 {
+    display: table;
+}
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.block-center {
+    margin: 0 auto;
+}
+
+/*inline-block*/
+.demo5 {
+    text-align: center;
+    overflow: auto;
+}
+.demo5:after, .inline-center {
+    display: inline-block;
+    verticel: middle;
+}
+.demo5:after {
+    content: '';
+    height: 50%;
+    margin-left: -0.25em;
+}
+.inline-center {
+    max-width: 99%;
+}
+
+/*flexbox法*/
+.demo6 {
+    display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+    display: -moz-box;      /* OLD: Firefox (buggy) */
+    display: -ms-flexbox;   /* MID: IE 10 */
+    display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
+    display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
+
+    -webkit-box-align: center; 
+        -moz-box-align: center; /* OLD… */
+        -ms-flex-align: center; /* You know the drill now… */
+    -webkit-align-items: center;
+            align-items: center;
+
+    -webkit-box-pack: center; 
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+
+    -webkit-justify-content: center;
+            justify-content: center;
+}
+.flexbox {
+    display: -webkit-box; display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-align: center; -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+}
+

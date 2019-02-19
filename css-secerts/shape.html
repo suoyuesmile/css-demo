@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        margin: 40px;
+        line-height: 300px;
+        height: 300px;
+        width: 400px;
+        background: #58a;
+        color: white;
+        text-align: center;
+      }
+
+      .ellipse {
+        border-radius: 50%;
+      }
+
+      .half-ellipse {
+        border-radius: 50% / 100% 100% 0 0;
+      }
+
+      .quater-ellipse {
+        border-radius: 100% 0 0 0;
+      }
+
+      .parallelograms {
+        position: relative;
+        /* background: white; */
+        /* background: #58a; */
+        /* transform: skewX(45deg); */
+      }
+
+      .parallelograms::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: #58a;
+        transform: skew(45deg);
+      }
+      
+      .diamond-images1 {
+        height: 300px;
+        width: 300px;
+        transform: rotate(45deg);
+        overflow: hidden;
+      }
+
+      .diamond-images1 > img {
+        max-width: 100%;
+        transform: rotate(-45deg) scale(3);
+      }
+
+      .diamond-images2 {
+        height: 300px;
+        width: 300px;
+        background-image: url(../images/03.jpg);
+        background-size: 100% 100%;
+        clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+        transition: 1s clip-path;
+      }
+      .diamond-images2:hover {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      .bevel-corners-gradients {
+        background: #58a;
+        background: linear-gradient(-45deg, transparent 15px, #58a 0);
+      }
+
+      .bevel-four-corners-gradients {
+        background: #58a;
+        background: linear-gradient(135deg, transparent 15px, #58a 0) top left,
+        linear-gradient(-135deg, transparent 15px, #58a 0) top right,
+        linear-gradient(-45deg, transparent 15px, #58a 0) bottom right,
+        linear-gradient(45deg, transparent 15px, #58a 0) bottom left;
+        background-size: 50% 50%;
+        background-repeat: no-repeat;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box ellipse">椭圆</div>
+    <div class="box half-ellipse">半椭圆</div>
+    <div class="box quater-ellipse">1/4椭圆</div>
+    <div class="box parallelograms">平行四边形</div>
+    <div class="box diamond-images1">
+      <img src="../images/03.jpg">
+    </div>
+    <div class="box diamond-images2"></div>
+    <div class="box bevel-corners-gradients"></div>
+    <div class="box bevel-four-corners-gradients"></div>
+  </body>
+</html>

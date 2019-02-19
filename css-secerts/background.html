@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      .main {
+        height: 1000px;
+        /* background: url(../images/03.jpg); */
+      }
+      .box {
+        margin: 40px;
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        line-height: 300px;
+        background: white;
+      }
+      .translucent-borders {
+        border: 30px solid hsla(0, 0%, 100%, 0.5);
+        background-clip: padding-box;
+      }
+      .multiple-borders {
+        border: 30px solid hsla(0, 0%, 100%, 0.5);
+        box-shadow: 0 0 0 15px #655, 0 0 0 30px deeppink,
+          0 2px 5px 35px rgba(0, 0, 0, 0.6);
+      }
+      .inner-rounding {
+        background: tan;
+        border-radius: 0.8em;
+        padding: 1em;
+        font-size: 20px;
+        box-shadow: 0 0 0 0.6em #655;
+        outline: 0.6em solid #655;
+      }
+      .horizontal-stripes-double {
+        background: linear-gradient(#fb3 30%, #58a 0);
+        background-size: 100% 30px;
+      }
+      .horizontal-stripes-more {
+        background: linear-gradient(
+          #fb3 33.3%,
+          #58a 0,
+          #58a 66.6%,
+          yellowgreen 0
+        );
+        background-size: 100% 45px;
+      }
+      .vertical-stripes {
+        background: linear-gradient(90deg, #fb3 50%, #58a 0);
+        background-size: 30px 100%;
+      }
+      .diagonal-stripes {
+        background: linear-gradient(
+          45deg,
+          #fb3 25%,
+          #58a 0,
+          #58a 50%,
+          #fb3 0,
+          #fb3 75%,
+          #58a 0
+        );
+        background-size: 30px 30px;
+      }
+      .diagonal-stripes-60deg {
+        background: repeating-linear-gradient(
+          60deg,
+          #fb3,
+          #fb3 15px,
+          #58a 0,
+          #58a 30px
+        );
+      }
+      .blueprint {
+        background: #58a;
+        background-image: linear-gradient(
+            90deg,
+            rgba(200, 0, 0, 0.5) 50%,
+            transparent 0
+          ),
+          linear-gradient(rgba(200, 0, 0, 0.5) 50%, transparent 0);
+        background-size: 30px 30px;
+      }
+      .blueprint2 {
+        background: #58a;
+        background-image: linear-gradient(90deg, white 2px, transparent 0),
+          linear-gradient(white 2px, transparent 0),
+          linear-gradient(hsla(0, 0%, 100%, 0.3) 1px, transparent 0),
+          linear-gradient(90deg, hsla(0, 0%, 100%, 0.3) 1px, transparent 0);
+        background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px;
+      }
+      .polka {
+        background: #655;
+        background-image: radial-gradient(tan 30%, transparent 0),
+          radial-gradient(tan 30%, transparent 0);
+        background-size: 30px 30px;
+        background-position: 0 0, 15px 15px;
+      }
+      .qipan {
+        background: #eee;
+        background-image: linear-gradient(45deg, tansparent 75%, #bbb 0);
+        background-size: 30px 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h4 for="">1.透明边框</h4>
+      <div class="box translucent-borders">盒子精1</div>
+      <h4 for="">2.嵌套边框</h4>
+      <div class="box multiple-borders">盒子精2</div>
+      <h4 for="">3.内嵌圆角</h4>
+      <div class="box inner-rounding">盒子精3</div>
+      <h4 for="">4.水平条纹</h4>
+      <div class="box horizontal-stripes-double">水平条纹</div>
+      <h4 for="">5.水平多条纹</h4>
+      <div class="box horizontal-stripes-more">水平多条纹</div>
+      <h4 for="">6.垂直条纹</h4>
+      <div class="box vertical-stripes">垂直条纹</div>
+      <h4 for="">7.斜向条纹</h4>
+      <div class="box diagonal-stripes">斜向条纹</div>
+      <h4 for="">8.60度斜向条纹</h4>
+      <div class="box diagonal-stripes-60deg">60度斜向条纹</div>
+      <h4>9.网格图案</h4>
+      <div class="box blueprint">网格图案</div>
+      <h4>10.网格图案2</h4>
+      <div class="box blueprint2">网格图案</div>
+      <h4>11.波点图案</h4>
+      <div class="box polka">波点图案</div>
+      <h4>12.棋盘图案</h4>
+      <div class="box qipan">棋盘图案</div>
+    </div>
+  </body>
+</html>

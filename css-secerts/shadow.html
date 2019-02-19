@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        margin: 40px;
+        line-height: 300px;
+        height: 300px;
+        width: 400px;
+        background: #58a;
+        color: white;
+        text-align: center;
+      }
+
+      .shadow {
+        box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .shadow-one-side {
+        box-shadow: 0 5px 4px -4px yblack;
+      }
+
+      .shadow-two-sides {
+        box-shadow: 3px 3px 6px -3px black;
+      }
+
+      .shadow-opposite-sides {
+        box-shadow: 5px 0 5px -5px black, -5px 0 5px -5px black;
+      }
+
+      .parallelograms::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: #58a;
+        transform: skew(45deg);
+      }
+
+      .frosted-glass-wrapper {
+        background-image: url(../images/03.jpg);
+      }
+      .frosted-glass-wrapper .frosted-glass {
+        position: relative;
+        margin: 10% 10%;
+        border-radius: 4px;
+        width: 80%;
+        height: 80%;
+        background: hsla(0, 0%, 100%, 0.3);
+        box-shadow: 0 5px 4px -4px yblack;
+        overflow: hidden;
+      }
+      .frosted-glass::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        filter: blur(20px);
+        z-index: -1;
+        margin: -30px;
+        /* background-image: url(../images/03.jpg); */
+      }
+
+      .fold-corner {
+        background: #58a;
+        background: linear-gradient(
+              to left bottom,
+              transparent 50%,
+              rgba(0, 0, 0, 0.4) 0
+            )
+            no-repeat 100% 0 / 2em 2em,
+          linear-gradient(-135deg, transparent 1.5em, #58a 0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box"></div>
+    <div class="box shadow">投影</div>
+    <div class="box shadow-one-side">单侧投影</div>
+    <div class="box shadow-two-sides">邻近投影</div>
+    <div class="box shadow-opposite-sides">相对投影</div>
+    <div class="box frosted-glass-wrapper">
+      <div class="box frosted-glass">毛玻璃</div>
+    </div>
+    <div class="box fold-corner">折角</div>
+  </body>
+</html>

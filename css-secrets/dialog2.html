@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-size: 16px;
+      }
+
+      .box {
+        margin: 40px;
+        line-height: 300px;
+        height: 300px;
+        width: 400px;
+        /* background: #58a; */
+        /* color: white; */
+        text-align: center;
+      }
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(66, 66, 66, 0.8);
+      }
+
+      main {
+        transition: 0.6s filter;
+      }
+
+      main.de-emphasized {
+        filter: blur(3px) contrast(0.8) brightness(0.8);
+      }
+
+      .dialog {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        background: #fff;
+        z-index: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="overlay de-emphasized">
+      <dl>
+        <dt>Name:</dt>
+        <dd>shaosuo</dd>
+
+        <dt>Email:</dt>
+        <dd>suoyuesmile@163.com</dd>
+        <dd>suoyuesmile@gmail.com</dd>
+
+        <dt>Location:</dt>
+        <dd>guangzhou</dd>
+      </dl>
+    </main>
+    <div class="box dialog">对话框</div>
+  </body>
+</html>

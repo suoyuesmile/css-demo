@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .flex-wrapper-flow {
+      display: flex;
+      /* flex-direction: column; */
+      /* flex-wrap: wrap; */
+      flex-flow: column wrap;
+      height: 500px;
+      width: 500px;
+      border: 1px solid #666;
+    }
+    .flex-wrapper-basic {
+      display: flex;
+      /* flex-direction: column; */
+      /* flex-wrap: wrap; */
+      /* flex-flow: column wrap; */
+      height: 500px;
+      width: 500px;
+      border: 1px solid #666;
+    }
+    .box {
+      margin: 0.5em;
+      height: 4em;
+      width: 4em;
+      background: #58a;
+      text-align: center;
+      line-height: 4em;
+      font-size: 1em;
+      color: #fff;
+    }
+    .box2 {
+      flex-basis: 50px;
+      margin: 0.5em;
+      background: #58a;
+      text-align: center;
+      font-size: 1em;
+      color: #fff;      
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="flex-wrapper-flow">
+      <div class="box">a</div>
+      <div class="box">b</div>
+      <div class="box">b</div>
+      <div class="box">b</div>
+      <div class="box">b</div>
+      <div class="box">b</div>
+      <div class="box">b</div>
+      <!-- <div class="box">b</div>
+      <div class="box">b</div>
+      <div class="box">b</div> -->
+    </div>
+    <div class="flex-wrapper-basic">
+      <div class="box2">a33</div>
+      <div class="box2">23b</div>
+      <div class="box2">44b</div>
+      <div class="box2">55b</div>
+      <div class="box2">66</div>
+      <div class="box2">b66</div>
+      <div class="box2">b66</div>
+      <!-- <div class="box">b</div>
+      <div class="box">b</div>
+      <div class="box">b</div> -->
+    </div>
+  </main>
+</body>
+</html>

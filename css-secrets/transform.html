@@ -1,0 +1,64 @@
+<html>
+
+<head>
+  <style>
+    body {
+      font-size: 16px;
+    }
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    main {
+      height: 500px;
+      width: 300px;
+      border: 1px solid #eee;
+    }
+    main .ball {
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background: #85a;
+    }
+    main .ease {
+      animation: 1s bounce-ease ease-in;
+    }
+    main .bezier {
+      animation: 1s bounce-bezier cubic-bezier(.1,.25,.1,.25);
+    }
+    main .transition {
+      transition: 1s cubic-bezier(.25, .1, .3, 1.5) transform;
+    }
+    main .transition:hover {
+      transform: translateY(350px);
+      transition-timing-function: ease;
+    }
+    @keyframes bounce-ease {
+      60%, 80%, to {
+        transform: translateY(350px);
+        animation-timing-function: ease-out;
+      }
+      70% { transform: translateY(250px); }
+      90% { transform: translateY(300px); }
+    }
+    @keyframes bounce-bezier {
+      60%, 80%, to {
+        transform: translateY(350px);
+        animation-timing-function: ease-out;
+      }
+      70% { transform: translateY(250px); }
+      90% { transform: translateY(300px); }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="ball ease"></div>
+    <div class="ball bezier"></div>
+    <div class="ball transition"></div>
+  </main>
+</body>
+
+</html>

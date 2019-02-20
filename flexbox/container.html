@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrapper {
+      display: flex;
+      height: 500px;
+      width: 500px;
+      border: 1px solid #666;
+    }
+
+    .box {
+      margin: 0.5em;
+      height: 4em;
+      width: 4em;
+      background: #58a;
+      text-align: center;
+      line-height: 4em;
+      font-size: 1em;
+      color: #fff;
+    }
+    
+    .direction {
+      flex-direction: column;
+    }
+
+    .wrap {
+      flex-wrap: wrap;
+    }
+
+    .flow {
+      flex-direction: column;
+      flex-flow: column wrap;
+    }
+
+    .justify-content {
+      
+    }
+
+    .align-items {
+
+    }
+
+    .align-content {
+
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="wrapper direction">
+      <div class="box">a</div>
+      <div class="box">b</div>
+      <div class="box">b</div>
+      <div class="box">b</div>
+      <div class="box">b</div>
+      <div class="box">b</div>
+      <div class="box">b</div>
+      <!-- <div class="box">b</div>
+      <div class="box">b</div>
+      <div class="box">b</div> -->
+    </div>
+    <div class="wrapper wrap">
+      <div class="box">a33</div>
+      <div class="box">23b</div>
+      <div class="box">44b</div>
+      <div class="box">55b</div>
+      <div class="box">66</div>
+      <div class="box">b66</div>
+      <div class="box">b66</div>
+      <!-- <div class="box">b</div>
+      <div class="box">b</div>
+      <div class="box">b</div> -->
+    </div>
+    <div class="wrapper flow">
+      <div class="box">a33</div>
+      <div class="box">23b</div>
+      <div class="box">44b</div>
+      <div class="box">55b</div>
+      <div class="box">66</div>
+      <div class="box">b66</div>
+      <div class="box">b66</div>
+    </div>
+  </main>
+</body>
+
+</html>

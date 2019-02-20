@@ -1,0 +1,120 @@
+<html>
+
+<head>
+  <style>
+    body {
+      font-size: 16px;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      /* margin: 40px; */
+      /* line-height: 300px;
+      height: 300px;
+      width: 400px; */
+      background: #58a;
+      color: white;
+      text-align: center;
+    }
+
+    .box-parent {
+      position: relative;
+      border: 1px solid black;
+      width: 600px;
+      height: 300px;
+    }
+
+    .flex {
+      display: flex;
+      /* min-height: 100vh; */
+      margin: 0;
+    }
+
+    .item-center {
+      align-self: center;
+    }
+    
+    .center {
+      position: absolute;
+      top: calc(50% - 3em);
+      left: calc(50% - 9em);
+      width: 18em;
+      height: 6em;
+      line-height: 6em;
+    }
+
+    .center2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .center3 {
+      width: 18em;
+      padding: 1em 1.5em;
+      margin: 50vh auto 0;
+      transform: translateY(-50%);
+    }
+    .center4 {
+      margin: auto;
+    }
+    .center-perfect {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 18em;
+      height: 10em;;
+    }
+    </style>
+</head>
+
+<body>
+  <div class="box-parent">
+    <div class="box center">固定高度和固定宽度居中</div>
+  </div>
+  <div class="box-parent">
+    <div class="box center2">
+      <p>
+        非固定宽度居中.............
+      </p>
+      <p>
+        非固定宽度居中2.............
+      </p>
+    </div>
+  </div>
+  <div class="box-parent flex">
+    <div class="box center4">
+      <p>
+        非固定宽度居中.............
+      </p>
+      <p>
+        非固定宽度居中2.............
+      </p>
+    </div>
+  </div>
+  <div class="box-parent item-center">
+    <div class="box center-prefect">
+      <p>
+        非固定宽度居中.............
+      </p>
+      <p>
+        非固定宽度居中2.............
+      </p>
+    </div>
+  </div>
+  <!-- <div class="box-parent"> -->
+    <!-- <div class="box center3"> -->
+      <!-- <p>
+        非固定宽度居中.............
+      </p>
+      <p>
+        非固定宽度居中2.............
+      </p>
+    </div> -->
+  <!-- </div> -->
+</body>
+
+</html>

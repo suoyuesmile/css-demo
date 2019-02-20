@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <style>
+    body {
+      font-size: 16px;
+    }
+    .box {
+      margin: 40px;
+      line-height: 300px;
+      height: 300px;
+      width: 400px;
+      background: #58a;
+      color: white;
+      text-align: center;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; right: 0; bottom: 0; left: 0;
+      background: rgba(0, 0, 0, .8);
+    }
+
+    .dialog {
+      position: absolute;
+      border-radius: 4px;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay">
+    <div class="box dialog">对话框</div>
+  </div>
+</body>
+
+</html>
